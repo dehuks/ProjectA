@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dairy | Barasa's Groceries</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+    }
+    
+    header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em 0;
+    }
+    
+    nav ul {
+        list-style: none;
+    }
+    
+    nav ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+    
+    main {
+        margin: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .product {
+        text-align: center;
+        margin: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+        max-width: 300px;
+    }
+    
+    .product:hover {
+        transform: translateY(-5px);
+    }
+    
+    .product img {
+        max-width: 100%;
+        border: 2px solid #FCE000;
+        border-radius: 10px;
+        transition: transform 0.2s;
+    }
+    
+    .product img:hover {
+        transform: scale(1.05);
+    }
+    
+    .product h2 {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    
+    .product p {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+    
+
+    .sticky footer{
+        position: sticky;
+        top: 100%;
+    }
+    body{
+        min-height: 100vh;
+    }
+    li{
+        text-decoration: none;
+    }
+    </style>
+     <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <h1>Dairy</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product">
+            <img src="butter.jpg" alt="Butter">
+            <h2>Butter</h2>
+            <p>Ksh. 250 per kg</p>
+            <button class="addToCartButton">Add to Cart</button>
+        </section>
+
+        <section class="product">
+            <img src="yoghurt.jpg" alt="Yoghurt">
+            <h2>Yoghurt</h2>
+            <p>Ksh. 300 per litre</p>
+            <button class="addToCartButton">Add to Cart</button>
+        </section>
+
+        <section class="product">
+            <img src="milk.jpg" alt="Milk">
+            <h2>Milk</h2>
+            <p>Ksh. 70 per litre</p>
+            <button class="addToCartButton">Add to Cart</button>
+        </section>
+
+        <section class="product">
+            <img src="cheese.webp" alt="Cheese">
+            <h2>Cheese</h2>
+            <p>Ksh. 350 per kg</p>
+            <button class="addToCartButton">Add to Cart</button>
+        </section>
+    </main>
+    <!-- Cart Contents -->
+    <h1>Shopping Cart</h1>
+    <ul id="cartList"></ul>
+
+    <script>
+        // JavaScript code to handle adding items to the cart
+        var addToCartButtons = document.querySelectorAll('.addToCartButton');
+        var cartList = document.getElementById('cartList');
+
+        addToCartButtons.forEach(function(button, index) {
+            button.addEventListener('click', function() {
+                var productTitle = this.parentNode.querySelector('h2').textContent;
+                var cartItem = document.createElement('li');
+                cartItem.textContent = productTitle;
+                cartList.appendChild(cartItem);
+            });
+        });
+    </script>
+
+    <div class="footer">
+        <footer>
+            &copy; 2023 Barasa's Groceries
+        </footer>
+    </div>
+</body>
+</html>
+

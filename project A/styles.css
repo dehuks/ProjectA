@@ -1,0 +1,85 @@
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style: none;
+}
+.footer {
+    position: fixed; /* Fixed position to stick at the bottom */
+    bottom: 0; /* Stick to the bottom of the viewport */
+    width: 100%; /* Full width of the viewport */
+    background-color: #333; /* Background color for the footer */
+    color: #fff; /* Text color for the footer */
+    text-align: center; /* Center the text horizontally */
+    padding: 10px; /* Add padding for better appearance */
+}
+/* Style for the Add to Cart button */
+.addToCartButton {
+    background-color: #ff6a00; /* Blue background color */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 10px 20px; /* Padding to make the button larger */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.addToCartButton:hover {
+    background-color: #c4b889; /* Darker blue on hover */
+}
+
+/* Style for the product container (just for spacing) */
+.product {
+    margin-bottom: 20px;
+}
+
+/* Style for the shopping cart list (just for spacing) */
+#cartList {
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+main {
+    margin: 20px;
+}
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+#formiy{
+    text-align: center;
+    width:30%;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #a881ff;
+    font-family: "Arial Black";
+    float: none;
+    justify-content: center;
+}
+.container{
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 200vh;
+}

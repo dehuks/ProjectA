@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Condiments | Barasa's Groceries</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+    }
+    
+    header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em 0;
+    }
+    
+    nav ul {
+        list-style: none;
+    }
+    
+    nav ul li a {
+        display: inline;
+        margin: 0 10px;
+        color: #e4d5c7;
+        text-decoration: none;
+    }
+    
+    main {
+        margin: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .product {
+        text-align: center;
+        margin: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+        max-width: 300px;
+    }
+    
+    .product:hover {
+        transform: translateY(-5px);
+    }
+    
+    .product img {
+        max-width: 100%;
+        border: 2px solid #FCE000;
+        border-radius: 10px;
+        transition: transform 0.2s;
+    }
+    
+    .product img:hover {
+        transform: scale(1.05);
+    }
+    
+    .product h2 {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    
+    .product p {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+    
+    footer {
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px 0;
+        background-color: #333;
+        color: #fff;
+    }
+    </style>
+     <link rel="icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Condiments</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product">
+            <img src="mayonnaise.webp" alt="Mayonnaise">
+            <h2>Mayonnaise</h2>
+            <p>Ksh. 250 per kg</p>
+            <button class="addToCartButton">Add to Cart</button>
+        </section>
+
+        <section class="product">
+            <img src="TomatoSauce.png" alt="Tomato Sauce">
+            <h2>Tomato Sauce</h2>
+            <p>Ksh. 300 per litre</p>
+            <button class="addToCartButton">Add to Cart</button>
+        </section>
+
+        <section class="product">
+            <img src="chutney.webp" alt="Chutney">
+            <h2>Chutney</h2>
+            <p>Ksh. 500 per bottle</p>
+            <button class="addToCartButton">Add to Cart</button>
+        </section>
+    </main>
+    <!-- Cart Contents -->
+    <h1>Shopping Cart</h1>
+    <ul id="cartList"></ul>
+
+    <script>
+        // JavaScript code to handle adding items to the cart
+        var addToCartButtons = document.querySelectorAll('.addToCartButton');
+        var cartList = document.getElementById('cartList');
+
+        addToCartButtons.forEach(function(button, index) {
+            button.addEventListener('click', function() {
+                var productTitle = this.parentNode.querySelector('h2').textContent;
+                var cartItem = document.createElement('li');
+                cartItem.textContent = productTitle;
+                cartList.appendChild(cartItem);
+            });
+        });
+    </script>
+
+
+    <div class="footer">
+        <footer>
+            &copy; 2023 Barasa's Groceries
+        </footer>
+    </div>
+</body>
+</html>
